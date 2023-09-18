@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Match buddies{% endblock %}
+
+{% block content %}
+<h2>Matched Profiles</h2>
+<ul>
+{% for profile in matched_profiles %}
+    <li>{{ profile.user.username }}</li>  {# or any other details you'd like to display #}
+{% endfor %}
+</ul>
+{% endblock %}
